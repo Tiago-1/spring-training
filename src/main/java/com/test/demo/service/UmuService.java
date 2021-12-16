@@ -26,6 +26,12 @@ public class UmuService {
     @Autowired
     private UmuRepository repository;
 
+    @GetMapping(value = "/test")
+    public String getTest(){
+        log.info("Exito hermano");
+        return "Solo te falta la conexion Mysql";
+    }
+
     @RequestMapping(value = "/test/{id}")
     public Umu getUmu(@PathVariable String id){
         log.info("Getting umu by id: {}",id);
