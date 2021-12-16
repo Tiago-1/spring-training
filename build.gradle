@@ -1,5 +1,6 @@
 plugins {
 	id 'org.springframework.boot' version '2.4.10'
+    id 'com.google.cloud.tools.jib' version '1.6.1'
 	id 'java'
     id 'groovy'
     id 'jacoco'
@@ -21,6 +22,21 @@ configurations {
 
 repositories {
 	mavenCentral()
+}
+
+
+jib {
+    from {
+        image = 'openjdk:8-jre'
+    }
+    to {
+        
+    }
+    container {
+        jvmFlags = ['-server', '-XX:+UseConcMarkSweepGC', '-XX:+CMSParallelRemarkEnabled', '-XX:+ScavengeBeforeFullGC', '-XX:+CMSScavengeBeforeRemark', '-XX:MinHeapFreeRatio=20', '-XX:MaxHeapFreeRatio=40', '-XX:GCTimeRatio=4', '-XX:AdaptiveSizePolicyWeight=90', '-Xms40M', '-Xmx512M']
+        ports = ['8080']
+        creationTime = 'USE_CURRENT_TIMESTAMP'
+    }
 }
 
 dependencies {
