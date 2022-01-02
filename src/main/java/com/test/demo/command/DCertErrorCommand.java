@@ -1,6 +1,5 @@
 package com.test.demo.command;
 
-import org.springframework.context.annotation.Description;
 
 import lombok.Data;
 
