@@ -1,14 +1,9 @@
 package com.test.demo.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import com.test.demo.models.SesionUser;
-import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;

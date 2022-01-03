@@ -48,3 +48,7 @@ logging:
     root: ${LOG_LEVEL:INFO}
     io.lkmx.maypo.portal: ${APP_LOG_LEVEL:INFO}
 
+element: 
+  test: ${TEST:Espero que esto funcione}
+  arreglo: ${ARREGLO:alberto.santiago,alberto92santiago,santiago92alberto}
+  platformAviable: ${PlatformAv:7.00,17.00}
