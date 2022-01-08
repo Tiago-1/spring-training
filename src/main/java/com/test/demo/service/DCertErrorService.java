@@ -3,9 +3,9 @@ package com.test.demo.service;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.test.demo.command.DCertErrorCommand;
 import com.test.demo.data.DCertErrorRepository;
 import com.test.demo.models.DCertError;
+import com.test.demo.service.command.DCertErrorCommand;
 import com.test.demo.service.error.ResourceNotFoundError;
 
 import org.springframework.beans.factory.annotation.Autowired;

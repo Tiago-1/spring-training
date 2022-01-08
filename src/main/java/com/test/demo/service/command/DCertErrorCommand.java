@@ -1,4 +1,4 @@
-package com.test.demo.command;
+package com.test.demo.service.command;
 
 
 import lombok.Data;
