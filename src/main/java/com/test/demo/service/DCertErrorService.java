@@ -90,10 +90,4 @@ public class DCertErrorService {
 
         certErrorRepository.delete(certError);
     }
-
-
-
-
-    
-
 }
