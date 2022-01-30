@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 public interface RecollectionOrderRepository extends JpaRepository<RecollectionOrder, String>, JpaSpecificationExecutor<RecollectionOrder> {
     
 
-    Optional<RecollectionOrder> findByUmuIdAndCreatedByUserIdAndStatus (String umuId, String userId,
+    Optional<RecollectionOrder> findFirstByUmuIdAndCreatedByUserIdAndStatus (String umuId, String userId,
                                                                         RecollectionOrderStatus status);
 
 

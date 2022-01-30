@@ -40,7 +40,7 @@ public class RecollectionService {
     @GetMapping(value = "/clients/{clientId}/recollection/{currentUser}")
     public RecollectionOrder get(@PathVariable String currentUser, @PathVariable String clientId) {
         log.info("current user {} and umu {}",currentUser,clientId);
-        return currentRecollectionOrderThreadSync.evaluate(currentUser, () -> repository.findByUmuIdAndCreatedByUserIdAndStatus(clientId, currentUser, RecollectionOrderStatus.DRAFT)
+        return currentRecollectionOrderThreadSync.evaluate(currentUser, () -> repository.findFirstByUmuIdAndCreatedByUserIdAndStatus(clientId, currentUser, RecollectionOrderStatus.DRAFT)
                 .orElseGet(() -> buildNewRecollectionOrder(currentUser, clientId)));
     }
 
